@@ -22,7 +22,7 @@ st.markdown(
 )
 
 # === LOAD DATA ===
-file_path = "C:/Users/Administrator/OneDrive/Dokumen/SKRIPSI NINIS/forecasting/hasil forecast svr/rekap svr [36].xlsx"
+file_path = "rekap svr [36].xlsx"
 fitted_df = pd.read_excel(file_path, sheet_name='fitted value', index_col=0)
 aktual_df = pd.read_excel(file_path, sheet_name='asli', index_col=0)
 ramal_df = pd.read_excel(file_path, sheet_name='forecast', index_col=0)
@@ -100,7 +100,7 @@ if wilayah_pilihan == "Provinsi DI Yogyakarta":
     import pandas as pd
 
     # === Load Data ===
-    file_path = "C:/Users/Administrator/OneDrive/Dokumen/SKRIPSI NINIS/forecasting/hasil forecast svr/rekap svr [36].xlsx"
+    file_path = "rekap svr [36].xlsx"
     aktual_df = pd.read_excel(file_path, sheet_name='asli', index_col=0)
     forecast_df = pd.read_excel(file_path, sheet_name='forecast', index_col=0)
 
@@ -136,7 +136,7 @@ if wilayah_pilihan == "Provinsi DI Yogyakarta":
         total_wisatawan_per_tahun[tahun] = total.to_dict()
 
     # === Load GeoJSON ===
-    with open("C:/Users/Administrator/OneDrive/Dokumen/SKRIPSI NINIS/forecasting/hasil forecast svr/batas_diy.geojson", "r") as f:
+    with open("batas_diy.geojson", "r") as f:
         geojson_diy = json.load(f)
 
     # === Warna Tetap per Wilayah ===
