@@ -70,14 +70,14 @@ if wilayah_pilihan == "Provinsi DI Yogyakarta":
             <div style='font-size: 15px; text-align: justify;'>
             <b>Destinasi Wisata Populer:</b><br>
             • <b>Kulon Progo</b>: 
-            <a href="https://www.google.com/maps?q=Kebun+Teh+Nglinggo" target="_blank">Kebun Teh Nglinggo</a>, 
             <a href="https://www.google.com/maps?q=Kalibiru" target="_blank">Kalibiru</a><br>
+            <a href="https://www.google.com/maps?q=Pule+Payung" target="_blank">Pule Payung</a>, 
             • <b>Bantul</b>: 
             <a href="https://www.google.com/maps?q=Pantai+Parangtritis" target="_blank">Pantai Parangtritis</a>, 
             <a href="https://www.google.com/maps?q=Gumuk+Pasir" target="_blank">Gumuk Pasir</a><br>
             • <b>Gunung Kidul</b>: 
-            <a href="https://www.google.com/maps?q=Pantai+Indrayanti" target="_blank">Pantai Indrayanti</a>, 
             <a href="https://www.google.com/maps?q=Goa+Pindul" target="_blank">Goa Pindul</a><br>
+            <a href="https://www.google.com/maps?q=Pantai+Indrayanti" target="_blank">Pantai Indrayanti</a>, 
             • <b>Sleman</b>: 
             <a href="https://www.google.com/maps?q=Candi+Prambanan" target="_blank">Candi Prambanan</a>, 
             <a href="https://www.google.com/maps?q=Tebing+Breksi" target="_blank">Tebing Breksi</a><br>
