@@ -148,20 +148,20 @@ if wilayah_pilihan == "Provinsi DI Yogyakarta":
         "Kota Yogyakarta": "#9D4EDD"
     }
 
+    # === Dropdown Pilihan Tahun (DIPINDAHKAN KE ATAS) ===
+    st.markdown("### Pilih Tahun")
+    tahun_pilihan = st.selectbox(
+        "", 
+        options=[2023, 2024, 2025, 2026], 
+        index=0,
+        format_func=lambda x: f"Tahun {x}" if x == 2023 else f"Peramalan Tahun {x}"
+    )
+
     # === Bagi jadi dua kolom ===
     col1, col2 = st.columns([1, 1])
 
     with col1:
         with st.container():
-            # === Dropdown Pilihan Tahun ===
-            st.markdown("### 🗺️ Peta Informasi Jumlah Wisatawan")
-            tahun_pilihan = st.selectbox(
-                "", 
-                options=[2023, 2024, 2025, 2026], 
-                index=0,
-                format_func=lambda x: f"Tahun {x}" if x == 2023 else f"Peramalan Tahun {x}"
-            )
-
             # Ambil data jumlah wisatawan sesuai tahun
             jumlah_dict = total_wisatawan_per_tahun[tahun_pilihan]
 
