@@ -480,6 +480,12 @@ else:
             st.info("Tidak ada data untuk tahun ini.")
 
     with col2:
+        judul_inter = (
+                f"### 📝 Interpretasi Hasil Tahun {tahun_pilihan}" 
+                if tahun_pilihan == 2023 
+                else f"### 📝 Interpretasi Hasil Peramalan {tahun_pilihan}"
+            )
+            st.markdown(judul_peta)
         st.markdown("### 📝 Interpretasi Hasil")
         st.markdown(" ")
         st.markdown(" ")
