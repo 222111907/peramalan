@@ -212,7 +212,7 @@ if wilayah_pilihan == "Provinsi DI Yogyakarta":
      
     with col2:
         with st.container():
-           judul_stat = (
+            judul_stat = (
                 f"### 📊 Statistik Deskriptif Jumlah Wisatawan {tahun_pilihan}" 
                 if tahun_pilihan == 2023 
                 else f"### 📊 Statistik Deskriptif Peramalan Jumlah Wisatawan Tahun {tahun_pilihan}"
