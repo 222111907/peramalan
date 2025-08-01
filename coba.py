@@ -481,9 +481,7 @@ else:
 
     with col2:
         judul_inter = (
-                f"### 📝 Interpretasi Hasil Tahun {tahun_pilihan}" 
-                if tahun_pilihan == 2023 
-                else f"### 📝 Interpretasi Hasil Peramalan {tahun_pilihan}"
+                f"### 📝 Interpretasi Hasil Peramalan {tahun_dipilih}" 
             )
         st.markdown(judul_inter)
         st.markdown(" ")
