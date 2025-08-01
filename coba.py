@@ -271,7 +271,12 @@ if wilayah_pilihan == "Provinsi DI Yogyakarta":
 
 
             # === CORRELATION HEATMAP ===
-            st.markdown("### 🔄 Korelasi Antar Wilayah")
+            judul_kor = (
+                f"### 🔄 Korelasi Jumlah Wisatawan Antar Wilayah Tahun {tahun_pilihan}" 
+                if tahun_pilihan == 2023 
+                else f"### 🔄 Korelasi Peramalan Jumlah Wisatawan Antar Wilayah Tahun {tahun_pilihan}"
+            )
+            st.markdown(judul_kor)
 
             # Ambil data tahun untuk korelasi
             if tahun_pilihan == 2023:
@@ -356,7 +361,7 @@ if wilayah_pilihan == "Provinsi DI Yogyakarta":
 # === HALAMAN WILAYAH ===
 else:
     kolom = daftar_wilayah[wilayah_pilihan]
-    st.subheader(f"###📊 Hasil Peramalan: {wilayah_pilihan}")
+    st.subheader(f"📊 Hasil Peramalan: {wilayah_pilihan}")
 
     # Ambil data berdasarkan wilayah yang dipilih
     fitted = fitted_df[[kolom]]
@@ -441,8 +446,8 @@ else:
     # Bagi jadi dua kolom
     col1, col2 = st.columns([1, 1])  # Masing-masing setengah halaman
 
-    with col1: 
-        st.markdown("###📊 Tabel Jumlah Wisatawan")
+    with col1:
+        st.markdown("### 📊 Tabel Jumlah Wisatawan")
 
         # Siapkan data
         df_ramal_tampil = ramal.copy()
@@ -475,7 +480,7 @@ else:
             st.info("Tidak ada data untuk tahun ini.")
 
     with col2:
-        st.markdown("📝 Interpretasi Hasil")
+        st.markdown("### 📝 Interpretasi Hasil")
         st.markdown(" ")
         st.markdown(" ")
 
