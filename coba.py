@@ -162,6 +162,8 @@ if wilayah_pilihan == "Provinsi DI Yogyakarta":
 
     with col1:
         with st.container():
+            st.markdown("### 🗺️ Peta Informasi Jumlah Wisatawan")
+            
             # Ambil data jumlah wisatawan sesuai tahun
             jumlah_dict = total_wisatawan_per_tahun[tahun_pilihan]
 
