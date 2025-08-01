@@ -41,7 +41,7 @@ daftar_wilayah = {
 opsi_dropdown = ["Provinsi DI Yogyakarta"] + list(daftar_wilayah.keys())
 
 # === SELECTBOX WILAYAH ===
-wilayah_pilihan = st.selectbox("", options=opsi_dropdown)
+wilayah_pilihan = st.selectbox("Pilih Kabupaten/Kota", options=opsi_dropdown)
 
 # === HALAMAN UTAMA ===
 if wilayah_pilihan == "Provinsi DI Yogyakarta":
@@ -149,9 +149,9 @@ if wilayah_pilihan == "Provinsi DI Yogyakarta":
     }
 
     # === Dropdown Pilihan Tahun (DIPINDAHKAN KE ATAS) ===
-    st.markdown("### Pilih Tahun")
+    st.markdown("### 📌 Peta & Statistik Deskriptif")
     tahun_pilihan = st.selectbox(
-        "", 
+        "Pilih Tahun", 
         options=[2023, 2024, 2025, 2026], 
         index=0,
         format_func=lambda x: f"Tahun {x}" if x == 2023 else f"Peramalan Tahun {x}"
