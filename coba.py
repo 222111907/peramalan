@@ -485,8 +485,7 @@ else:
                 if tahun_pilihan == 2023 
                 else f"### 📝 Interpretasi Hasil Peramalan {tahun_pilihan}"
             )
-            st.markdown(judul_peta)
-        st.markdown("### 📝 Interpretasi Hasil")
+        st.markdown(judul_inter)
         st.markdown(" ")
         st.markdown(" ")
 
