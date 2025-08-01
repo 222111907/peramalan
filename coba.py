@@ -149,7 +149,7 @@ if wilayah_pilihan == "Provinsi DI Yogyakarta":
     }
 
     # === Dropdown Pilihan Tahun (DIPINDAHKAN KE ATAS) ===
-    st.markdown("### 📌 Peta & Statistik Deskriptif")
+    st.markdown("### 📌 Peta dan Statistik Deskriptif")
     tahun_pilihan = st.selectbox(
         "Pilih Tahun", 
         options=[2023, 2024, 2025, 2026], 
@@ -162,7 +162,12 @@ if wilayah_pilihan == "Provinsi DI Yogyakarta":
 
     with col1:
         with st.container():
-            st.markdown("### 🗺️ Peta Informasi Jumlah Wisatawan")
+           judul_peta = (
+                f"### 🗺️ Peta Informasi Jumlah Wisatawan Tahun {tahun_pilihan}" 
+                if tahun_pilihan == 2023 
+                else f"### 🗺️ Peta Informasi Peramalan Jumlah Wisatawan Tahun {tahun_pilihan}"
+            )
+            st.markdown(judul_peta)
             
             # Ambil data jumlah wisatawan sesuai tahun
             jumlah_dict = total_wisatawan_per_tahun[tahun_pilihan]
@@ -207,7 +212,13 @@ if wilayah_pilihan == "Provinsi DI Yogyakarta":
      
     with col2:
         with st.container():
-            st.markdown("### 📊 Statistik Deskriptif Jumlah Wisatawan")
+           judul_stat = (
+                f"### 📊 Statistik Deskriptif Jumlah Wisatawan {tahun_pilihan}" 
+                if tahun_pilihan == 2023 
+                else f"### 📊 Statistik Deskriptif Peramalan Jumlah Wisatawan Tahun {tahun_pilihan}"
+            )
+            st.markdown(judul_stat)
+
             st.markdown(" ")
             # Ambil data tahun yang dipilih
             if tahun_pilihan == 2023:
@@ -345,7 +356,7 @@ if wilayah_pilihan == "Provinsi DI Yogyakarta":
 # === HALAMAN WILAYAH ===
 else:
     kolom = daftar_wilayah[wilayah_pilihan]
-    st.subheader(f"📊 Hasil Peramalan: {wilayah_pilihan}")
+    st.subheader(f"###📊 Hasil Peramalan: {wilayah_pilihan}")
 
     # Ambil data berdasarkan wilayah yang dipilih
     fitted = fitted_df[[kolom]]
@@ -431,7 +442,7 @@ else:
     col1, col2 = st.columns([1, 1])  # Masing-masing setengah halaman
 
     with col1: 
-        st.markdown("📊 Tabel Jumlah Wisatawan")
+        st.markdown("###📊 Tabel Jumlah Wisatawan")
 
         # Siapkan data
         df_ramal_tampil = ramal.copy()
