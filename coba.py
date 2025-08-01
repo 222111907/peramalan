@@ -162,7 +162,7 @@ if wilayah_pilihan == "Provinsi DI Yogyakarta":
 
     with col1:
         with st.container():
-           judul_peta = (
+            judul_peta = (
                 f"### 🗺️ Peta Informasi Jumlah Wisatawan Tahun {tahun_pilihan}" 
                 if tahun_pilihan == 2023 
                 else f"### 🗺️ Peta Informasi Peramalan Jumlah Wisatawan Tahun {tahun_pilihan}"
